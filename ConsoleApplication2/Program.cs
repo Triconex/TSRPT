@@ -13,6 +13,9 @@ namespace ConsoleApplication2
             Console.WriteLine("TEST APL! T1");
             Console.WriteLine("TEST T1 B3 TEST");
 
+            Console.WriteLine("TEST APL! T1 B2 TEST");
+            Console.WriteLine("TEST APL! T1 B2 TEST");
+
             // Just to keep the console window open in debug mode.
             Console.WriteLine("Press any key to exit.");
             Console.ReadKey();
