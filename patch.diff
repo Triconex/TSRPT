@@ -1,0 +1,254 @@
+From b56a06840170ebb095d4b8925ff9853b3d40331c Mon Sep 17 00:00:00 2001
+From: DK KD <DK KD>
+Date: Tue, 12 Apr 2016 00:09:49 +0200
+Subject: [PATCH] T0 B
+
+---
+ ConsoleApplication2.sln                            | 22 ++++++++
+ ConsoleApplication2/App.config                     |  6 +++
+ ConsoleApplication2/ConsoleApplication2.csproj     | 58 ++++++++++++++++++++++
+ ConsoleApplication2/Program.cs                     | 15 ++++++
+ ConsoleApplication2/Properties/AssemblyInfo.cs     | 36 ++++++++++++++
+ .../bin/Debug/ConsoleApplication2.exe.config       |  6 +++
+ .../Debug/ConsoleApplication2.vshost.exe.config    |  6 +++
+ .../Debug/ConsoleApplication2.vshost.exe.manifest  | 11 ++++
+ ...tedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs |  0
+ ...tedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs |  0
+ ...tedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs |  0
+ 11 files changed, 160 insertions(+)
+ create mode 100644 ConsoleApplication2.sln
+ create mode 100644 ConsoleApplication2/App.config
+ create mode 100644 ConsoleApplication2/ConsoleApplication2.csproj
+ create mode 100644 ConsoleApplication2/Program.cs
+ create mode 100644 ConsoleApplication2/Properties/AssemblyInfo.cs
+ create mode 100644 ConsoleApplication2/bin/Debug/ConsoleApplication2.exe.config
+ create mode 100644 ConsoleApplication2/bin/Debug/ConsoleApplication2.vshost.exe.config
+ create mode 100644 ConsoleApplication2/bin/Debug/ConsoleApplication2.vshost.exe.manifest
+ create mode 100644 ConsoleApplication2/obj/Debug/TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs
+ create mode 100644 ConsoleApplication2/obj/Debug/TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs
+ create mode 100644 ConsoleApplication2/obj/Debug/TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs
+
+diff --git a/ConsoleApplication2.sln b/ConsoleApplication2.sln
+new file mode 100644
+index 0000000..ea2186f
+--- /dev/null
++++ b/ConsoleApplication2.sln
+@@ -0,0 +1,22 @@
++﻿
++Microsoft Visual Studio Solution File, Format Version 12.00
++# Visual Studio 2013
++VisualStudioVersion = 12.0.40629.0
++MinimumVisualStudioVersion = 10.0.40219.1
++Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApplication2", "ConsoleApplication2\ConsoleApplication2.csproj", "{E2A50E5C-7A2F-4832-A7C0-05CC6CC3096D}"
++EndProject
++Global
++	GlobalSection(SolutionConfigurationPlatforms) = preSolution
++		Debug|Any CPU = Debug|Any CPU
++		Release|Any CPU = Release|Any CPU
++	EndGlobalSection
++	GlobalSection(ProjectConfigurationPlatforms) = postSolution
++		{E2A50E5C-7A2F-4832-A7C0-05CC6CC3096D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
++		{E2A50E5C-7A2F-4832-A7C0-05CC6CC3096D}.Debug|Any CPU.Build.0 = Debug|Any CPU
++		{E2A50E5C-7A2F-4832-A7C0-05CC6CC3096D}.Release|Any CPU.ActiveCfg = Release|Any CPU
++		{E2A50E5C-7A2F-4832-A7C0-05CC6CC3096D}.Release|Any CPU.Build.0 = Release|Any CPU
++	EndGlobalSection
++	GlobalSection(SolutionProperties) = preSolution
++		HideSolutionNode = FALSE
++	EndGlobalSection
++EndGlobal
+diff --git a/ConsoleApplication2/App.config b/ConsoleApplication2/App.config
+new file mode 100644
+index 0000000..8e15646
+--- /dev/null
++++ b/ConsoleApplication2/App.config
+@@ -0,0 +1,6 @@
++﻿<?xml version="1.0" encoding="utf-8" ?>
++<configuration>
++    <startup> 
++        <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.5" />
++    </startup>
++</configuration>
+\ No newline at end of file
+diff --git a/ConsoleApplication2/ConsoleApplication2.csproj b/ConsoleApplication2/ConsoleApplication2.csproj
+new file mode 100644
+index 0000000..5bacb55
+--- /dev/null
++++ b/ConsoleApplication2/ConsoleApplication2.csproj
+@@ -0,0 +1,58 @@
++﻿<?xml version="1.0" encoding="utf-8"?>
++<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
++  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
++  <PropertyGroup>
++    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
++    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
++    <ProjectGuid>{E2A50E5C-7A2F-4832-A7C0-05CC6CC3096D}</ProjectGuid>
++    <OutputType>Exe</OutputType>
++    <AppDesignerFolder>Properties</AppDesignerFolder>
++    <RootNamespace>ConsoleApplication2</RootNamespace>
++    <AssemblyName>ConsoleApplication2</AssemblyName>
++    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
++    <FileAlignment>512</FileAlignment>
++  </PropertyGroup>
++  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
++    <PlatformTarget>AnyCPU</PlatformTarget>
++    <DebugSymbols>true</DebugSymbols>
++    <DebugType>full</DebugType>
++    <Optimize>false</Optimize>
++    <OutputPath>bin\Debug\</OutputPath>
++    <DefineConstants>DEBUG;TRACE</DefineConstants>
++    <ErrorReport>prompt</ErrorReport>
++    <WarningLevel>4</WarningLevel>
++  </PropertyGroup>
++  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
++    <PlatformTarget>AnyCPU</PlatformTarget>
++    <DebugType>pdbonly</DebugType>
++    <Optimize>true</Optimize>
++    <OutputPath>bin\Release\</OutputPath>
++    <DefineConstants>TRACE</DefineConstants>
++    <ErrorReport>prompt</ErrorReport>
++    <WarningLevel>4</WarningLevel>
++  </PropertyGroup>
++  <ItemGroup>
++    <Reference Include="System" />
++    <Reference Include="System.Core" />
++    <Reference Include="System.Xml.Linq" />
++    <Reference Include="System.Data.DataSetExtensions" />
++    <Reference Include="Microsoft.CSharp" />
++    <Reference Include="System.Data" />
++    <Reference Include="System.Xml" />
++  </ItemGroup>
++  <ItemGroup>
++    <Compile Include="Program.cs" />
++    <Compile Include="Properties\AssemblyInfo.cs" />
++  </ItemGroup>
++  <ItemGroup>
++    <None Include="App.config" />
++  </ItemGroup>
++  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
++  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
++       Other similar extension points exist, see Microsoft.Common.targets.
++  <Target Name="BeforeBuild">
++  </Target>
++  <Target Name="AfterBuild">
++  </Target>
++  -->
++</Project>
+\ No newline at end of file
+diff --git a/ConsoleApplication2/Program.cs b/ConsoleApplication2/Program.cs
+new file mode 100644
+index 0000000..4089d93
+--- /dev/null
++++ b/ConsoleApplication2/Program.cs
+@@ -0,0 +1,15 @@
++﻿using System;
++using System.Collections.Generic;
++using System.Linq;
++using System.Text;
++using System.Threading.Tasks;
++
++namespace ConsoleApplication2
++{
++    class Program
++    {
++        static void Main(string[] args)
++        {
++        }
++    }
++}
+diff --git a/ConsoleApplication2/Properties/AssemblyInfo.cs b/ConsoleApplication2/Properties/AssemblyInfo.cs
+new file mode 100644
+index 0000000..6cc1020
+--- /dev/null
++++ b/ConsoleApplication2/Properties/AssemblyInfo.cs
+@@ -0,0 +1,36 @@
++﻿using System.Reflection;
++using System.Runtime.CompilerServices;
++using System.Runtime.InteropServices;
++
++// General Information about an assembly is controlled through the following 
++// set of attributes. Change these attribute values to modify the information
++// associated with an assembly.
++[assembly: AssemblyTitle("ConsoleApplication2")]
++[assembly: AssemblyDescription("")]
++[assembly: AssemblyConfiguration("")]
++[assembly: AssemblyCompany("")]
++[assembly: AssemblyProduct("ConsoleApplication2")]
++[assembly: AssemblyCopyright("Copyright ©  2016")]
++[assembly: AssemblyTrademark("")]
++[assembly: AssemblyCulture("")]
++
++// Setting ComVisible to false makes the types in this assembly not visible 
++// to COM components.  If you need to access a type in this assembly from 
++// COM, set the ComVisible attribute to true on that type.
++[assembly: ComVisible(false)]
++
++// The following GUID is for the ID of the typelib if this project is exposed to COM
++[assembly: Guid("3f40e4f9-40fd-43e8-adbd-e6bf80f39a0d")]
++
++// Version information for an assembly consists of the following four values:
++//
++//      Major Version
++//      Minor Version 
++//      Build Number
++//      Revision
++//
++// You can specify all the values or you can default the Build and Revision Numbers 
++// by using the '*' as shown below:
++// [assembly: AssemblyVersion("1.0.*")]
++[assembly: AssemblyVersion("1.0.0.0")]
++[assembly: AssemblyFileVersion("1.0.0.0")]
+diff --git a/ConsoleApplication2/bin/Debug/ConsoleApplication2.exe.config b/ConsoleApplication2/bin/Debug/ConsoleApplication2.exe.config
+new file mode 100644
+index 0000000..8e15646
+--- /dev/null
++++ b/ConsoleApplication2/bin/Debug/ConsoleApplication2.exe.config
+@@ -0,0 +1,6 @@
++﻿<?xml version="1.0" encoding="utf-8" ?>
++<configuration>
++    <startup> 
++        <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.5" />
++    </startup>
++</configuration>
+\ No newline at end of file
+diff --git a/ConsoleApplication2/bin/Debug/ConsoleApplication2.vshost.exe.config b/ConsoleApplication2/bin/Debug/ConsoleApplication2.vshost.exe.config
+new file mode 100644
+index 0000000..8e15646
+--- /dev/null
++++ b/ConsoleApplication2/bin/Debug/ConsoleApplication2.vshost.exe.config
+@@ -0,0 +1,6 @@
++﻿<?xml version="1.0" encoding="utf-8" ?>
++<configuration>
++    <startup> 
++        <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.5" />
++    </startup>
++</configuration>
+\ No newline at end of file
+diff --git a/ConsoleApplication2/bin/Debug/ConsoleApplication2.vshost.exe.manifest b/ConsoleApplication2/bin/Debug/ConsoleApplication2.vshost.exe.manifest
+new file mode 100644
+index 0000000..061c9ca
+--- /dev/null
++++ b/ConsoleApplication2/bin/Debug/ConsoleApplication2.vshost.exe.manifest
+@@ -0,0 +1,11 @@
++﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
++<assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">
++  <assemblyIdentity version="1.0.0.0" name="MyApplication.app"/>
++  <trustInfo xmlns="urn:schemas-microsoft-com:asm.v2">
++    <security>
++      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
++        <requestedExecutionLevel level="asInvoker" uiAccess="false"/>
++      </requestedPrivileges>
++    </security>
++  </trustInfo>
++</assembly>
+diff --git a/ConsoleApplication2/obj/Debug/TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs b/ConsoleApplication2/obj/Debug/TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs
+new file mode 100644
+index 0000000..e69de29
+diff --git a/ConsoleApplication2/obj/Debug/TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs b/ConsoleApplication2/obj/Debug/TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs
+new file mode 100644
+index 0000000..e69de29
+diff --git a/ConsoleApplication2/obj/Debug/TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs b/ConsoleApplication2/obj/Debug/TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs
+new file mode 100644
+index 0000000..e69de29
+-- 
+2.7.0.windows.1
+
